@@ -13,7 +13,6 @@
 <body>
 
     <script>
-
         // ※ 注意要用全形的＊和全形的空白 ※
 
         // 分解動作
@@ -25,24 +24,19 @@
         //    第三列：1=>1、7=>7
         //    第四列：
         // 3. 觀察星星中間位置: 中間位置 = 最終列
-        function show()
-        {
-            var i , j, result = "";
+        function show() {
+            var i, j, result = "";
             var num = document.getElementById('inputStr').value;
             console.log(num);
 
-            for (i = 0; i < num; i++)
-            {
+            for (i = 0; i < num; i++) {
                 for (j = 0; j < num - i - 1; j++)
                     result += "&emsp;";
-                    // console.log('.');
                 for (j = 0; j < i * 2 + 1; j++)
-                result += "＊";                
-                    // console.log('*');                    
+                    result += "＊";
                 for (j = 0; j < num - i - 1; j++)
-                result += "&emsp;";
-                    // console.log('+');                                        
-                    result += "<br>";                                    
+                    result += "&emsp;";
+                result += "<br>";
             }
 
             document.getElementById('demo').innerHTML = result;
@@ -51,13 +45,8 @@
 
     <label for="inputStr">輸入聖誕樹的高度</label>
     <input type="text" name="" id="inputStr">
-    <button onclick="show()">確認</button>    
+    <button onclick="show()">確認</button>
     <p id="demo">christmas tree</p>
-
-    <!-- <label for="">請輸入頻道代碼：</label>
-    <input type="text" name="" id="inputStr">
-    <button onclick="show()">查詢</button>
-    <p id="demo">頻道的中文</p>     -->
 </body>
 
 </html>
